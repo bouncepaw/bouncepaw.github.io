@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>Leteroj de Inferno</title>
+  <style type="text/css">
+.content {
+  width: 500px;
+  background: white
+}
+img {
+  width: 30px
+}
+h1, h2 {
+  font-weight: bold;
+  margin: 0;
+  font-family: "Roboto Slab", "PT Serif", serif;
+}
+h1 {
+  font-size: 3em
+}
+h2 {
+  font-size: 1.5em
+}
+</style>
+</head>
+<body>
+<div class="content"><h1>Leteroj de Inferno</h1>
+<p>Letters of Inferno · Буквы Инферно<br>@bouncepaw · hackthegate</p>
+<hr>
+<p>Для перевода русского текста на буквы Инферно необходимо:</p>
+<ol>
+  <li>Написать транскрипцию слова.</li>
+  <li>Перевести каждый звук в соответствующую букву.</li>
+</ol>
+<p>Есть 16 основных символов. Если написать просто символ, он будет обозначать то, что он обычно значит. Если над буквой нарисовать диакритику, то звук сменится на парный; к примеру: /л/ станет /р/. Если под гласной нарисовать диакритику, то она йотируется; к примеру: /а/ станет /й'а/. Если под согласной нарисовать диакритику, то она смягчится; к примеру: /п/ станет /п'/. Можно нарисовать диакритику с обоих сторон.</p>
+<p>Можно использовать любую диакритику. Рекомедуются горизонтальные линии (макрон).</p>
+<h2>Таблица символов</h2>
+<table> 
+  <tr><th>Буква</th><th>Чтение</th><th>Пара</th></tr>
+  <tr><td><img src="http://i.piccy.info/i9/249bdc7fe80a29ac5cdc22d74682a231/1478702945/791/1088004/sago_1.png"></td><td>/а/</td><td>/ә/</td></tr>
+  <tr><td><img src="http://i.piccy.info/i9/e665bcd8569b83a1de87fd0c96d6ae9f/1478703086/635/1088004/sago_4.png"></td><td>/э/</td><td>/ү/</td></tr>
+  <tr><td><img src="http://i.piccy.info/i9/3a6a3f0a686a37dc97f25aba23d97e93/1478703030/640/1088004/sago_2.png"></td><td>/и/</td><td>/ы/</td></tr>
+  <tr><td><img src="http://i.piccy.info/i9/fafcccc228b063f3e6a9b4906421a64c/1478703061/806/1088004/sago_3.png"></td><td>/у/</td><td>/ў/</td></tr>
+
+  <tr><td><img src="https://lh3.googleusercontent.com/aHeAUdNAZtd0x-Z89HJ8o4sf12Hs7fxdKWOGeICGCveaAFCqWOfUl6T_SbIWIdPcd59FNKyEyT1xR9k=w1126-h682"></td><td>/ц/</td><td>/дз/</td></tr>
+  <tr><td><img src="https://lh6.googleusercontent.com/-DVXhmQ-fodKLEhXlEF8mRin2Pijo4wu5M-ZDRA-Uymv_oy7KHtcBN99NJAqZnIFpBo9ngj0X62Q3Fs=w1126-h682"></td><td>/о/</td><td>/ө/</td></tr>
+  <tr><td><img src="https://lh5.googleusercontent.com/gMb4j17w9Vn-xNJs9yc80Ig7uW0p_4eDgHtR8WjAx3HfVTq7NGPUhCWjbeHkWkDmLghkEi7g9TVgaOM=w1126-h682"></td><td>/х/</td><td>/ғ/</td></tr>
+  <tr><td><img src="https://lh5.googleusercontent.com/6rPyxd00xeC6G8f66-UmDUtQCbRGS9BpqCL73iNSqWV9pgQWkFAh5txy2cuW6hH0Bn-Nkptpby8qI84=w1126-h682"></td><td>/ч/</td><td>/дж/</td></tr>
+
+  <tr><td><img src="https://lh4.googleusercontent.com/ZXnjBW38uerwpvMpTrULlMVSHcMJaReQQO-tnmbY4TCl2K3_uTc0mK37ohqMWPzUReLHfPDUPX8ko1A=w1126-h682"></td><td>/л/</td><td>/р/</td></tr>
+  <tr><td><img src="https://lh3.googleusercontent.com/95nCXeZzomB-5CK_Y_oDQtXMgAansKSNO5LZP3YIhZaSR6JxUdnV-3p7-VoN4VIJMyu6JzlwxnicZkQ=w1126-h682"></td><td>/ш/</td><td>/ж/</td></tr>
+  <tr><td><img src="https://lh3.googleusercontent.com/t1Wd5Ies45wVCC1L4pmq-RC_tblU4mH4nGx3wUhnveTgJXhjsRiInxgF2nzIB2luPuRPt8rfIN4zQSI=w1126-h682"></td><td>/с/</td><td>/з/</td></tr>
+  <tr><td><img src="https://lh3.googleusercontent.com/Co8iozaIA52FXY8Y7h7QC1zsd2Xv0KnZQylhUA1qVQZ3CSk8Lt7WKKqnd6cPng-4daYzM5en3Sv4wUw=w1126-h682"></td><td>/ф/</td><td>/в/</td></tr>
+  
+  <tr><td><img src="https://lh3.googleusercontent.com/0_hy71miSf8exK0IiZjbtxUfRkp4uNRo7heoisBmgZpeWl5JMXTRYbavc1YhOtENWnBbHzQOzj17odg=w1126-h682"></td><td>/п/</td><td>/б/</td></tr>
+  <tr><td><img src="https://lh5.googleusercontent.com/jxw1ZcmsuADUBTChRqpwtBTWSyXrrUlTjzqFQ8bNw_bVrBx7pjpSNtRgq8gNet_Z19vroAoJ6cV1EIg=w1126-h682"></td><td>/н/</td><td>/м/</td></tr>
+  <tr><td><img src="https://lh5.googleusercontent.com/jYo0agTXLTddLGsjVA5T8XBO9IZk9WM8vdreiuTYNx0q6asrr7am4hc7fxn4l3-5T1MseE9TQ162CiE=w1126-h682"></td><td>/т/</td><td>/д/</td></tr>
+  <tr><td><img src="https://lh3.googleusercontent.com/v-WcsRk4BdqChzX-6lkukIULQ2QJ721nCQbGlnxzDdACoJMpIsvMzQvxuMBNmN_1WseUMFcxtmEwyyI=w1126-h682"></td><td>/к/</td><td>/г/</td></tr>
+</table>
+</div>
+</body>
+</html>
