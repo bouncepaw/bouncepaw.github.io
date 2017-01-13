@@ -3,11 +3,11 @@
 var curPlayer = 1;
 function colorRed() {
   $("#board button").css("borderColor","red");
-  $("#output").css({"borderColor": "red"});
+  $("#output").css("borderColor", "red");
 };
 function colorBlue() {
   $("#board button").css("borderColor","blue");
-  $("#output").css({"borderColor": "blue"});
+  $("#output").css("borderColor", "blue");
 };
 function checkForWin() {
   b = new Array(); // board as array
@@ -58,9 +58,9 @@ function checkForWin() {
     };
   } else if ((b[0] == b[4] && b[4] == b[8]) && b[0] != "&nbsp;") { // diagonal 1
     if (b[0] == '<b class="red">X</b>') {
-      return ["#b-1", "#b-5", "#b-8", "x"];
+      return ["#b-1", "#b-5", "#b-9", "x"];
     } else {
-      return ["#b-1", "#b-5", "#b-8", "o"];
+      return ["#b-1", "#b-5", "#b-9", "o"];
     };
   } else if ((b[2] == b[4] && b[4] == b[6]) && b[2] != "&nbsp;") {
     if (b[2] == '<b class="red">X</b>') {
@@ -78,14 +78,14 @@ function findTheWinner() {
   if (c[0] != "nope") { // has anyone won?
     winnerExistence = true;
     if (c[3] == "x") {
-      $(c[0] + " b").css({"color": "darkred"}); // color marks
-      $(c[1] + " b").css({"color": "darkred"});
-      $(c[2] + " b").css({"color": "darkred"});
+      $(c[0] + " b").css("color", "black");
+      $(c[1] + " b").css("color", "black");
+      $(c[2] + " b").css("color", "black");
       $("#output").html("Победил крестик! Сыграть заново?<a href='xo.html'>да</a><img src='trophy.png'>");
     } else {
-      $(c[0] + " b").css({"color": "darkblue"}); // color marks
-      $(c[1] + " b").css({"color": "darkblue"});
-      $(c[2] + " b").css({"color": "darkblue"});
+      $(c[0] + " b").css("color", "black");
+      $(c[1] + " b").css("color", "black");
+      $(c[2] + " b").css("color", "black");
       $("#output").html("Победил нолик! Сыграть заново?<a href='xo.html'>да</a><img src='trophy.png'>");
     };
   };
@@ -107,4 +107,22 @@ function setMark(pos) {
     $("#output").text("Эта клетка занята. Выбери другую.");
   };
   findTheWinner();
+  if (winnerExistence == false) {
+    checkDraw();
+  };
+};
+function checkDraw() {
+  b = new Array(); // board as array
+  b[0] = $("#b-1 button").html(); // first cell added
+  b[1] = $("#b-2 button").html(); // board indexes
+  b[2] = $("#b-3 button").html(); // 0 1 2
+  b[3] = $("#b-4 button").html(); // 3 4 5
+  b[4] = $("#b-5 button").html(); // 6 7 8
+  b[5] = $("#b-6 button").html();
+  b[6] = $("#b-7 button").html();
+  b[7] = $("#b-8 button").html();
+  b[8] = $("#b-9 button").html();
+  if (b.every(elem => elem != "&nbsp;")) {
+    $("#output").html("Ничья! Сыграть заново?<a href='xo.html'>да</a>");
+  };
 };
