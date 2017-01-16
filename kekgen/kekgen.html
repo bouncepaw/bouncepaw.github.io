@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KekGen — генератор кек</title>
+    <script src="kekgen.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="kekgen.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container shadow">
+        <h1 class="heading">KekGen</h1>
+        <p id="description"><b>KekGen</b> — один из самых полезных сервисов в интернете, способный облегчить жизнь форумных троллей, диванных аналитиков и иных человеков. Этот сервис предоставит вам слово «Кек» в наилучшем виде с возможностью скопировать в различных форматах.</p>
+        <h2 class="heading">Результат</h2>
+        <div id="output">
+          <span id="kek">КЕК</span>
+        </div><br>
+        <button onclick="doKek();">Кекнуть</button>
+        <!-- добавлю потом -->
+        <h2 class="heading">Скопировать как</h2>
+        <button onclick="copyOutputAs('html+css');" class="copy-btn">HTML + CSS</button>
+        <button onclick="copyOutputAs('html+inlinecss');" class="copy-btn">HTML + inline CSS</button>
+        <button onclick="copyOutputAs('mediawiki');" class="copy-btn">MediaWiki</button>
+        <button onclick="copyOutputAs('text');" class="copy-btn">Текст</button>
+      </div>
+    </div>
+  </body>
+</html>
