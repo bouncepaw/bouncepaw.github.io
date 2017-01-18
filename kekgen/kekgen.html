@@ -9,20 +9,17 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="container shadow">
+      <div class="container">
         <h1 class="heading">KekGen</h1>
-        <p id="description"><b>KekGen</b> — один из самых полезных сервисов в интернете, способный облегчить жизнь форумных троллей, диванных аналитиков и иных человеков. Этот сервис предоставит вам слово «Кек» в наилучшем виде с возможностью скопировать в различных форматах.</p>
+        <p><b>KekGen</b> — один из самых полезных сервисов в интернете, способный облегчить жизнь форумных троллей, диванных аналитиков и иных человеков. Этот сервис предоставит вам слово «Кек» в наилучшем виде с возможностью скопировать в различных форматах.</p>
         <h2 class="heading">Результат</h2>
         <div id="output">
           <span id="kek">КЕК</span>
         </div><br>
-        <button onclick="doKek();">Кекнуть</button>
-        <!-- добавлю потом -->
-        <h2 class="heading">Скопировать как</h2>
-        <button onclick="copyOutputAs('html+css');" class="copy-btn">HTML + CSS</button>
-        <button onclick="copyOutputAs('html+inlinecss');" class="copy-btn">HTML + inline CSS</button>
-        <button onclick="copyOutputAs('mediawiki');" class="copy-btn">MediaWiki</button>
-        <button onclick="copyOutputAs('text');" class="copy-btn">Текст</button>
+        <button onclick="doKek();" autofocus>Кекнуть</button>
+        <button onclick="getCopy();">Скопировать как HTML</button>
+        <p class="shame" id="copy-desc">Если больно надо, то можно скопировать код ниже и вставить на свой сайт. Но зачем?</p>
+        <textarea rows="8" cols="80" class="shame" id="copy"></textarea>
       </div>
     </div>
   </body>
