@@ -8,16 +8,11 @@ function l(who,text){output.append(`<p class="to-me"><span>${who}</span>${text}<
 function s(text){output.append(`<p class="from-me">${text}</p>`)}
 function response(text){s(text)
 cr()}
-function r(resps){for(var i=0;i<resps.length;i=i+2){responses.append(`<button onclick="response('${resps[i]}');${resps[i + 1]}()">
-        ${resps[i]}
-      </button>`)}}
+function r(resps){for(var i=0;i<resps.length;i=i+2){responses.append(`<button onclick="response('${resps[i]}');${resps[i + 1]}()">${resps[i]}</button>`)}}
 function co(){output.html("")}
 function cr(){responses.html("")}
 function ca(){co()
 scs()
 bg()}
-let save=document.getElementById("btn-save")
-let info=document.getElementById("btn-info")
-save.onclick=function(){alert("Your game wasn't saved, I will add this feature later.")};info.onclick=function(){alert("Ĉambraro 1.0.0 was Developed by bouncepaw.")};var responses=$("#responses")
 var world=$("#world")
 var output=$("#output")
