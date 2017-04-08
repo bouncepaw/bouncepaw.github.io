@@ -12,9 +12,20 @@ body {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+#info {
+  border: 0;
+  background: transparent;
+  font-size: 2em;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.no-select {
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
-   -khtml-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
 }

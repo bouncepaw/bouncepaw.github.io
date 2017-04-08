@@ -1,44 +1,48 @@
-var kek = $("#kek")
-var bg = $("#bg")
+let kek = $("#kek")
+let bg = $("#bg")
+let info = $("#info")
 
-bg.on("click", function() {
-  console.log("horosho")
-
-  let kekColor = getRandomColor()
-  let kekSize = getRandomSizePx()
+bg.on("click", () => {
+  let kekSize = getRandomSize() + "vh"
   kek.css({
-    "color": kekColor,
-    "font-size": kekSize + "px",
+    "color": getRandomColor(),
+    "font-size": kekSize,
+    "line-height": kekSize,
     "font-family": getRandomFont()
   })
 
-  let bgColor =  getRandomColor()
-  bg.css({
-    "background-color": bgColor
+  info.css({
+    "color": kek.css("color")
   })
 
-  if (kekColor == bgColor) alert("У вас цвета совпали!")
-  if (kekSize == 0) alert("У вас кек нулевой!")
+  bg.css({
+    "background-color": getRandomColor()
+  })
+
+  if (kek.css("background-color") == bg.css("background-color")) {
+    alert(`У вас цвета совпали!
+    Шанс этого события: 1 к 368532802176`)
+    let ninjas = +localStorage.getItem("ninjas") + 1 || 1
+    localStorage.setItem("ninjas", ninjas)
+  }
+
+  if (kek.css("font-size") == "0px") {
+    alert(`У вас кек нулевой!
+    Шанс этого события: 1 к 79`)
+    let zeros = +localStorage.getItem("zeros") + 1 || 1
+    localStorage.setItem("zeros", zeros)
+  }
+
+  let clicks = +localStorage.getItem("clicks") + 1 || 1
+  localStorage.setItem("clicks", clicks)
 })
 
-function getRandomNumber(max) {
-  return Math.floor(Math.random() * max)
-}
+info.on("click", () => {
+  alert(`
+    KekGen 2.1 by bouncepaw
 
-function getRandomColor() {
-  return `rgb(${getRandomNumber(256)},${getRandomNumber(256)},${getRandomNumber(256)})`
-}
-
-function getRandomSizePx() {
-  return getRandomNumber(600)
-}
-function getRandomFont() {
-  let dice = getRandomNumber(3)
-  if (dice == 0) {
-    return "'PT Sans', sans-serif"
-  } else if (dice == 1){
-    return "'PT Serif', serif"
-  } else {
-    return "'Ubuntu', sans-serif"
-  }
-}
+    Счётчик кликов: ${localStorage.getItem("clicks") || 0}
+    Счётчик нулевых кеков: ${localStorage.getItem("zeros") || 0}
+    Счётчик ниндзя-кеков: ${localStorage.getItem("ninjas") || 0}
+  `)
+})
