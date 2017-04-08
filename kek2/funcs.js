@@ -7,7 +7,7 @@ function getRandomColor() {
 }
 
 function getRandomSize() {
-  return getRandomNumber(79)
+  return getRandomNumber(79) + "vh"
 }
 
 function getRandomFont() {

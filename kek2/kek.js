@@ -2,12 +2,10 @@ let kek = $("#kek")
 let bg = $("#bg")
 let info = $("#info")
 
-bg.on("click", () => {
-  let kekSize = getRandomSize() + "vh"
+bg.click(() => {
   kek.css({
     "color": getRandomColor(),
-    "font-size": kekSize,
-    "line-height": kekSize,
+    "font-size": getRandomSize(),
     "font-family": getRandomFont()
   })
 
@@ -37,7 +35,7 @@ bg.on("click", () => {
   localStorage.setItem("clicks", clicks)
 })
 
-info.on("click", () => {
+info.click(() => {
   alert(`
     KekGen 2.1 by bouncepaw
 
