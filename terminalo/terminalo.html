@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="insert-here">
+  <meta charset="UTF-8">
+  <title>Terminalo</title>
+  <style>
+    body {
+      font-family: monospace;
+    }
+    .notice {
+      background-color: #f66;
+      padding: 10px;
+    }
+    h1, h2 {
+      border-bottom: 3px solid black;
+    }
+    pre {
+      background-color: #eee;
+    }
+    .container {
+      text-align: center;
+    }
+    .wrapper {
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<!-- lines must be 80 symbols width -->
+<!-- i mean lines that user sees, not the code ones -->
+  <div class="container"><div class="wrapper">
+  <section>
+    <h1>Terminalo</h1>
+    <p>Terminalo is a JS library designed to provide useful terminal lines to your site<br>
+    with copy function with little effort. You can use Terminalo two ways:</p>
+  </section>
+
+  <section>
+    <h2>Download</h2>
+    <p>It is just one file! Get it here:</p>
+
+  </section>
+
+  <section>
+    <h2>Usage</h2>
+  </section>
+
+  <section>
+    <h3>1. Block</h3>
+    <p>Use it when you have multiple commands. Each line takes full width of wrapper.<br>
+    Only basic styles are provided, further customization is up to you.</p>
+    <p>Feel free to click buttons below. These commands will download the<br>
+    repository to your computer.</p>
+
+    <div class="terminalo">
+      <div class="terminalo__line">git clone https://github.com/bouncepaw/terminalo.git</div>
+      <div class="terminalo__line">cd terminalo</div>
+    </div>
+
+    <pre>
+&lt;!-- What to write: -->
+&lt;div class="terminalo">
+  &lt;div class="terminalo__line">
+    git clone https://github.com/bouncepaw/terminalo.git
+  &lt;/div>
+  &lt;div class="terminalo__line">cd terminalo&lt;/div>
+&lt;/div>
+
+&lt;!-- It transformes into: -->
+&lt;div class="terminalo">
+  &lt;div class="terminalo__line">
+    &lt;button class="terminalo__button" id="terminalo__button_0">^C&lt;/button>
+    &lt;span class="terminalo__cmd" id="terminalo__cmd_0">
+      git clone https://github.com/bouncepaw/terminalo.git
+    &lt;/span>
+  &lt;/div>
+  &lt;div class="terminalo__line">
+    &lt;button class="terminalo__button" id="terminalo__button_1">^C&lt;/button>
+    &lt;span class="terminalo__cmd" id="terminalo__cmd_1">
+      cd terminalo
+    &lt;/span>
+  &lt;/div>
+&lt;/div>
+    </pre>
+  </section>
+
+  <section>
+    <h3>2. Inline</h3>
+    <p>Sometimes you need one little inline command. In this case use<br>
+    Terminalo without wrapper: <span class="terminalo__line">sudo rm -rf /*</span></p>
+
+    <pre>
+&lt;!-- What to write: -->
+&lt;span class="terminalo__line">sudo rm -rf /*&lt;/span>
+
+&lt;!-- It transformes into: -->
+&lt;span class="terminalo__line">
+  &lt;button class="terminalo__button" id="terminalo__button_2">^C&lt;/button>
+  &lt;span class="terminalo__cmd" id="terminalo__cmd_2">sudo rm -rf /*&lt;/span>
+&lt;/span>
+&lt;!-- Note that each Terminalo button and command on page has unique class.-->
+    </pre>
+  </section>
+
+  <hr><a href="bouncepaw.github.io">@bouncepaw</a>
+
+  </div></div>
+  <script src="clipboard.min.js"></script>
+  <script src="terminalo-dist.min.js"></script>
+</body>
+</html>
