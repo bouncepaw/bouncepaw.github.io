@@ -17,16 +17,14 @@ bg.click(() => {
     "background-color": getRandomColor()
   })
 
-  if (kek.css("background-color") == bg.css("background-color")) {
-    alert(`У вас цвета совпали!
-    Шанс этого события: 1 к 368532802176`)
+  if (kek.css("color") == bg.css("background-color")) {
+    alert("У вас ниндзя-кек!\nШанс этого события: 1 к 368532802176")
     let ninjas = +localStorage.getItem("ninjas") + 1 || 1
     localStorage.setItem("ninjas", ninjas)
   }
 
   if (kek.css("font-size") == "0px") {
-    alert(`У вас кек нулевой!
-    Шанс этого события: 1 к 79`)
+    alert("У вас кек нулевой!\nШанс этого события: 1 к 79")
     let zeros = +localStorage.getItem("zeros") + 1 || 1
     localStorage.setItem("zeros", zeros)
   }
@@ -37,7 +35,7 @@ bg.click(() => {
 
 info.click(() => {
   alert(`
-    KekGen 2.1 by bouncepaw
+    KekGen 2.3 by bouncepaw
 
     Счётчик кликов: ${localStorage.getItem("clicks") || 0}
     Счётчик нулевых кеков: ${localStorage.getItem("zeros") || 0}
