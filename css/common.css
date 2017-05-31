@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  }
+h1, h2, h3, h4, h5, h6 {
+  border-bottom: solid 2px black;
+}
+.center {
+  text-align: center;
+  }
+  .center__in {
+    display: inline-block;
+    }
+.page {
+  max-width: 600px;.
+  }
+.topbar {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  }
+  .topbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: none;
+    font-family: monospace;
+    }

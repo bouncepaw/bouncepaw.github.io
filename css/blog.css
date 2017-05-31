@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+  color: white;
+  }
+h1, h2 {
+  border-bottom-color: white;
+  font-family: "Roboto Slab", "PT Serif", serif;
+  }
+a {
+  color: white;
+  text-decoration: underline;
+  }
+  a:hover {
+    color: #ddd;
+    }
+.page {
+  background-color: #333;
+  padding: 10px;
+  }
+.desc {
+  text-align: left;
+  }
+  .desc__logo {
+    text-align: center;
+    }
+    .desc__title {
+      font-size: 3em;
+      margin: 0;
+      }
