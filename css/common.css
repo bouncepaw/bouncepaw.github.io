@@ -5,11 +5,9 @@ body {
   }
 a {
   color: black;
-  text-decoration: underline;
   }
   a:visited {
     color: black;
-    text-decoration: underline;
     }
   a:hover {
     color: #f77;

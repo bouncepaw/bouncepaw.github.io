@@ -1,9 +1,19 @@
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
   }
+a {
+  color: black;
+  text-decoration: none;
+  }
+  a:hover {
+    color: #f77;
+    text-decoration: underline;
+    }
 .heading {
-  font-family: "Roboto Slab", "PT Serif", serif;
+  font-family: "PT Serif", serif;
   color: #f77;
   margin: 0 0 0 0;
   display: block;
@@ -38,5 +48,11 @@ body {
   }
   .iconlinks__item {
     font-size: 3em;
+    text-decoration: none;
+    }
+.index {
+  font-size: large;
+  }
+  .index__item {
     text-decoration: none;
     }
