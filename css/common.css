@@ -1,9 +1,20 @@
 body {
   margin: 0;
+  font-family: "PT Sans", sans-serif;
+  height: 100%;
   }
-h1, h2, h3, h4, h5, h6 {
-  border-bottom: solid 2px black;
-}
+a {
+  color: black;
+  text-decoration: underline;
+  }
+  a:visited {
+    color: black;
+    text-decoration: underline;
+    }
+  a:hover {
+    color: #f77;
+    text-decoration: none;
+    }
 .center {
   text-align: center;
   }
@@ -15,13 +26,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 .topbar {
   width: 100%;
-  background-color: black;
+  background-color: rgba(255, 255, 255, .7);
   display: flex;
   justify-content: space-around;
+  position: fixed;
   }
   .topbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: none;
     font-family: monospace;
     }

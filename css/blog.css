@@ -1,29 +1,42 @@
 body {
-  background-color: black;
-  color: white;
+  display: flex;
+  flex-direction: column;
   }
-h1, h2 {
-  border-bottom-color: white;
+.heading {
   font-family: "Roboto Slab", "PT Serif", serif;
+  color: #f77;
+  margin: 0 0 0 0;
+  display: block;
+  text-align: center;
   }
-a {
-  color: white;
-  text-decoration: underline;
-  }
-  a:hover {
-    color: #ddd;
-    }
 .page {
-  background-color: #333;
   padding: 10px;
   }
 .desc {
-  text-align: left;
+  background-color: #111;
+  color: white;
   }
-  .desc__logo {
-    text-align: center;
+  .desc__title {
+    font-size: 3em;
     }
-    .desc__title {
-      font-size: 3em;
-      margin: 0;
-      }
+  .desc a {
+    color: #f77;
+    }
+.screen {
+  padding: 10%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .screen > * {
+    max-width: 500px;
+    }
+.iconlinks {
+  display: flex;
+  justify-content: space-between;
+  }
+  .iconlinks__item {
+    font-size: 3em;
+    text-decoration: none;
+    }
