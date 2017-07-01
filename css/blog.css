@@ -22,8 +22,11 @@ a {
   margin: 0;
   display: block;
   text-align: center;
-  font-size: 3em;
+  font-size: 3.4em;
   }
+  .heading sup {
+    font-size: .5em;
+    }
 .page {
   padding: 10px;
   }
