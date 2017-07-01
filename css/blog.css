@@ -5,17 +5,21 @@ body {
   font-family: "PT Sans", sans-serif;
   }
 a {
+          transition: color .2s ease-out;
+       -o-transition: color .2s ease-out;
+     -moz-transition: color .2s ease-out;
+  -webkit-transition: color .2s ease-out;
   color: black;
   text-decoration: none;
   }
   a:hover {
-    color: #f77;
     text-decoration: underline;
+    color: #f77;
     }
 .heading {
   font-family: "PT Serif", serif;
   color: #f77;
-  margin: 0 0 0 0;
+  margin: 0;
   display: block;
   text-align: center;
   font-size: 3em;
@@ -30,6 +34,9 @@ a {
   .desc a {
     color: #f77;
     }
+    .desc a:hover {
+      color: #fff;
+      }
 .screen {
   padding: 10%;
   text-align: left;
@@ -41,20 +48,31 @@ a {
     max-width: 500px;
     }
 .iconlinks {
-  margin-top: 50px;
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
   }
   .iconlinks__icon {
-    width: 50px;
-    fill: #fff;
+    width: 30px;
+    fill: #f77;
+            transition: fill .2s ease-out;
+         -o-transition: fill .2s ease-out;
+       -moz-transition: fill .2s ease-out;
+    -webkit-transition: fill .2s ease-out;
     }
     .iconlinks__icon:hover {
-      fill: #f77;
+      fill: #fff;
       }
 .index {
-  font-size: x-large;
+  font-size: 1.5em;
+  list-style: none;
+  padding: 0;
   }
   .index__item {
-    text-decoration: none;
+    padding-left: 16px;
     }
+    .index__item:before {
+      content: "•";
+      padding-right: 8px;
+      color: #f77;
+      }
