@@ -18,6 +18,7 @@ a {
   margin: 0 0 0 0;
   display: block;
   text-align: center;
+  font-size: 3em;
   }
 .page {
   padding: 10px;
@@ -26,9 +27,6 @@ a {
   background-color: #111;
   color: white;
   }
-  .desc__title {
-    font-size: 3em;
-    }
   .desc a {
     color: #f77;
     }
@@ -43,15 +41,19 @@ a {
     max-width: 500px;
     }
 .iconlinks {
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   }
-  .iconlinks__item {
-    font-size: 3em;
-    text-decoration: none;
+  .iconlinks__icon {
+    width: 50px;
+    fill: #fff;
     }
+    .iconlinks__icon:hover {
+      fill: #f77;
+      }
 .index {
-  font-size: large;
+  font-size: x-large;
   }
   .index__item {
     text-decoration: none;
