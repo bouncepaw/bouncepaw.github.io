@@ -68,6 +68,6 @@ a {
       }
 .index {
   font-size: 1.5em;
-  list-style: none;
+  list-style: square outside;
   padding: 0;
   }
