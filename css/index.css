@@ -1,0 +1,44 @@
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  font-size: 1em;
+  color: #111;
+  background-color: white;
+  }
+
+a {
+          transition: color .2s ease-out;
+       -o-transition: color .2s ease-out;
+     -moz-transition: color .2s ease-out;
+  -webkit-transition: color .2s ease-out;
+  color: black;
+  text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #f77;
+    }
+
+.title {
+
+  }
+  .title__nickname {
+    margin: 0;
+    font-size: 300%;
+    }
+    .title__at {
+      color: #888;
+      }
+
+.links {
+
+  }
+  .links__list {
+
+    }
+    .links__link {
+
+      }
