@@ -4,6 +4,14 @@ body {
   margin: 0;
   font-family: "PT Sans", sans-serif;
   }
+  body::-webkit-scrollbar {
+    width: 1em;
+    background-color: #282828;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #ebdbb2;
+    outline: 1px solid slategrey;
+  }
 a {
           transition: color .2s ease-out;
        -o-transition: color .2s ease-out;
@@ -14,11 +22,11 @@ a {
   }
   a:hover {
     text-decoration: underline;
-    color: #f77;
+    color: #d79921;
     }
 .heading {
   font-family: "PT Serif", serif;
-  color: #f77;
+  color: #fabd2f;
   margin: 0;
   display: block;
   text-align: center;
@@ -30,42 +38,30 @@ a {
 .page {
   padding: 10px;
   }
-.desc {
-  background-color: #111;
-  color: white;
-  }
-  .desc a {
-    color: #f77;
-    }
-    .desc a:hover {
-      color: #fff;
-      }
 .screen {
   padding: 10%;
   text-align: left;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ebdbb2;
   }
   .screen > * {
     max-width: 500px;
     }
-.iconlinks {
-  margin-top: 25px;
-  display: flex;
-  justify-content: space-between;
+.desc {
+  background-color: #282828;
+  color: #ebdbb2;
   }
-  .iconlinks__icon {
-    width: 30px;
-    fill: #f77;
-            transition: fill .2s ease-out;
-         -o-transition: fill .2s ease-out;
-       -moz-transition: fill .2s ease-out;
-    -webkit-transition: fill .2s ease-out;
+  .desc a {
+    color: #fabd2f;
     }
-    .iconlinks__icon:hover {
-      fill: #fff;
+    .desc a:hover {
+      color: #d79921;
       }
+.year__title {
+   color: #282828;
+   }
 .index {
   font-size: 1.5em;
   list-style: square outside;
