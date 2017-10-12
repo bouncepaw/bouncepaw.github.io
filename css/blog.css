@@ -25,7 +25,6 @@ a {
     color: #d79921;
     }
 .heading {
-  font-family: "PT Serif", serif;
   color: #fabd2f;
   margin: 0;
   display: block;
@@ -61,6 +60,7 @@ a {
       }
 .year__title {
    color: #282828;
+   font-size: 3em;
    }
 .index {
   font-size: 1.5em;
