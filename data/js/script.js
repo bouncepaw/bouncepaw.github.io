@@ -81,12 +81,12 @@ function findTheWinner() {
       $(c[0] + " b").css("color", "black");
       $(c[1] + " b").css("color", "black");
       $(c[2] + " b").css("color", "black");
-      $("#output").html("Победил крестик! Сыграть заново?<a href='xo.html'>да</a><img src='https://bouncepaw.github.io/data/img/trophy.png'>");
+      $("#output").html("Победил крестик! Сыграть заново?<a href='https://bouncepaw.github.io/xo'>да</a><img src='https://bouncepaw.github.io/data/img/trophy.png'>");
     } else {
       $(c[0] + " b").css("color", "black");
       $(c[1] + " b").css("color", "black");
       $(c[2] + " b").css("color", "black");
-      $("#output").html("Победил нолик! Сыграть заново?<a href='xo.html'>да</a><img src='https://bouncepaw.github.io/data/img/trophy.png'>");
+      $("#output").html("Победил нолик! Сыграть заново?<a href='https://bouncepaw.github.io/xo'>да</a><img src='https://bouncepaw.github.io/data/img/trophy.png'>");
     };
   };
 };
@@ -123,6 +123,6 @@ function checkDraw() {
   b[7] = $("#b-8 button").html();
   b[8] = $("#b-9 button").html();
   if (b.every(elem => elem != "&nbsp;")) {
-    $("#output").html("Ничья! Сыграть заново?<a href='xo.html'>да</a>");
+    $("#output").html("Ничья! Сыграть заново?<a href='https://bouncepaw.github.io/xo'>да</a>");
   };
 };
