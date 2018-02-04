@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<!-- i took t from the interwebz somewhere -->
-<html>
-  <head>
-    <title>{{ page.title }}</title>
-    <!-- link to main stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-  </head>
+<html lang="en">
+
+  {% include head.html %}
+
   <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/cv">CV</a></li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
-    </nav>
-    <div class="container">
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="{{ site.baseurl }}/">
+          <h2 class="nav-title">{{ site.title }}</h2>
+        </a>
+        <ul>
+          <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+          <li><a href="{{ site.baseurl }}/">Posts</a></li>
+        </ul>
+    </div>
+  </nav>
 
+    <main>
       {{ content }}
+    </main>
 
-    </div><!-- /.container -->
     <footer>
-      <ul>
-        <li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        <li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-      </ul>
+      <span>
+        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+      </span>
     </footer>
   </body>
 </html>
