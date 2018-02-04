@@ -1,6 +1,6 @@
 ---
 permalink: /карабины/
-layout:    artru
+layout:    post
 title:     Карабины
 date:      2018-01-03
 ---
