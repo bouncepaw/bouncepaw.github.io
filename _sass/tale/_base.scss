@@ -41,6 +41,10 @@ a:active {
   color: $blue;
 }
 
+.nav a {
+  text-decoration: none;
+}
+
 blockquote {
   border-left: .25rem solid black;
   color: black;
