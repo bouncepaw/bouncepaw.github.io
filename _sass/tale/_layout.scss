@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto;
   max-width: 800px;
-  width: 80%;
+  width: 90%;
 }
 
 main,
@@ -10,7 +10,7 @@ footer,
   display: block;
   margin: 0 auto;
   max-width: 800px;
-  width: 100%;
+  width: 90%;
 }
 
 .nav {
@@ -68,10 +68,6 @@ footer,
 
 @media (min-width: 600px) {
   .nav {
-    &-container {
-      text-align: left;
-    }
-
     ul {
       bottom: 0;
       position: absolute;
@@ -79,7 +75,7 @@ footer,
     }
   }
   main {
-    width: 95%;
+    width: 80%;
   }
 }
 
