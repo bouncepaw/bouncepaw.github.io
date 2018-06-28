@@ -83,7 +83,7 @@ published: false
 4. **Максимально простая установка**. Чтобы я мог запросто её поставитб когда
   надо куда надо. После обновления ядра, она может слететь. Для этого случая
   нужно подготовить простой скрипт.
-5. Ну и по мелочи там.
+5. **Типографические символы.** Тире, кавычки, вот это всё.
 
 ## Как создать раскладку?
 Я буду активно использовать командную строку. На линуксе за клавиатурные
@@ -105,17 +105,22 @@ cp us ru ~/keyboard
 cd ~/keyboard
 ```
 
-Одной командой: `mkdir ~/keyboard; cp /usr/share/X11/xkb/symbols/ru
-/usr/share/X11/xkb/symbols/us ~/keyboard/; cd ~/keyboard`.
+Одной командой:
+```bash
+mkdir ~/keyboard; cp /usr/share/X11/xkb/symbols/ru
+/usr/share/X11/xkb/symbols/us ~/keyboard/; cd ~/keyboard
+```
 
-Начнём с английской раскладки. Открываем в любимом текстовом редакторе:
+### Английская раскладка
+Открываем в любимом текстовом редакторе:
 ```bash
 vim us
 ```
 
 Файл длинный, в нём очень много раскладок. Стандартная наверху, там так и 
 написано: `default`. Меня интересует только она. Автор файла был не очень
-аккуратный, поэтому я красиво вырованял текст:
+аккуратный, поэтому я красиво выровнял текст за него (как было изначально,
+можно посмотреть в оригинальном файле):
 
 ```c
 default  partial alphanumeric_keys modifier_keys
@@ -177,4 +182,208 @@ xkb_symbols "basic" {
 };
 ```
 
-To be continued...
+Сначала добавим функциональные клавиши. Мне нужны `Home`, `Delete`, `PgUp`,
+`PgDn`, `End`, `Backspace` и стрелочки. В `xkb` для этих кнопок уже
+есть имена, так называемые `keysym`ы. Список всех `keysym`ов есть в файле
+`/usr/include/X11/keysymdef.h`.
+
+Я их размещу в третьем слое раскладки. Чтобы ввести символ с третьего слоя,
+надо нажать определённый модификатор (обычно правый Alt) и саму клавишу. 
+Стрелочки разместил как в `vim`, остальное просто сверху подряд разместил.
+
+```c
+// ...
+key <AD06> {[ y,            Y,         Home ]};
+key <AD07> {[ u,            U,         Page_Down ]};
+key <AD08> {[ i,            I,         Page_Up ]};
+key <AD09> {[ o,            O,         End ]};
+key <AD10> {[ p,            P,         BackSpace ]};
+key <AD11> {[ bracketleft,  braceleft, Delete ]};
+// ...
+key <AC06> {[ h,          H,       Left ]};
+key <AC07> {[ j,          J,       Down ]};
+key <AC08> {[ k,          K,       Up ]};
+key <AC09> {[ l,          L,       Right ]};
+// ...
+```
+
+Теперь пора разместить типографические значки. Разместил вот так:
+
+```c
+// ...
+key <AE11> {[ minus, underscore,  emdash ]}; // —
+// ...
+key <AB08> {[ comma,  less,    guillemotleft ]};  // «
+key <AB09> {[ period, greater, guillemotright ]}; // »
+// ...
+```
+
+В будущем добавлю больше знаков. Вот эти три просто самые нужные.
+
+Чтобы писать символы с третьего слоя, нужно добавить ещё вот такую строчку
+куда-нибудь в раскладку:
+
+```c
+include "level3(ralt_switch)"
+```
+В итоге английская раскладка выглядит так:
+
+```c
+default  partial alphanumeric_keys modifier_keys
+xkb_symbols "basic" {
+
+  name[Group1]= "English (US)";
+
+  key <TLDE> {[ grave, asciitilde ]};
+  key <AE01> {[ 1,     exclam ]};
+  key <AE02> {[ 2,     at ]};
+  key <AE03> {[ 3,     numbersign ]};
+  key <AE04> {[ 4,     dollar ]};
+  key <AE05> {[ 5,     percent ]};
+  key <AE06> {[ 6,     asciicircum ]};
+  key <AE07> {[ 7,     ampersand ]};
+  key <AE08> {[ 8,     asterisk ]};
+  key <AE09> {[ 9,     parenleft ]};
+  key <AE10> {[ 0,     parenright ]};
+  key <AE11> {[ minus, underscore,  emdash ]}; // —
+  key <AE12> {[ equal, plus ]};
+
+  key <AD01> {[ q,            Q ]};
+  key <AD02> {[ w,            W ]};
+  key <AD03> {[ e,            E ]};
+  key <AD04> {[ r,            R ]};
+  key <AD05> {[ t,            T ]};
+  key <AD06> {[ y,            Y,         Home ]};
+  key <AD07> {[ u,            U,         Page_Down ]};
+  key <AD08> {[ i,            I,         Page_Up ]};
+  key <AD09> {[ o,            O,         End ]};
+  key <AD10> {[ p,            P,         BackSpace ]};
+  key <AD11> {[ bracketleft,  braceleft, Delete ]};
+  key <AD12> {[ bracketright, braceright ]};
+
+  key <AC01> {[ a,          A ]};
+  key <AC02> {[ s,          S ]};
+  key <AC03> {[ d,          D ]};
+  key <AC04> {[ f,          F ]};
+  key <AC05> {[ g,          G ]};
+  key <AC06> {[ h,          H,       Left ]};
+  key <AC07> {[ j,          J,       Down ]};
+  key <AC08> {[ k,          K,       Up ]};
+  key <AC09> {[ l,          L,       Right ]};
+  key <AC10> {[ semicolon,  colon ]};
+  key <AC11> {[ apostrophe, quotedbl ]};
+
+  key <AB01> {[ z,      Z ]};
+  key <AB02> {[ x,      X ]};
+  key <AB03> {[ c,      C ]};
+  key <AB04> {[ v,      V ]};
+  key <AB05> {[ b,      B ]};
+  key <AB06> {[ n,      N ]};
+  key <AB07> {[ m,      M ]};
+  key <AB08> {[ comma,  less,    guillemotleft ]};  // «
+  key <AB09> {[ period, greater, guillemotright ]}; // »
+  key <AB10> {[ slash,  question ]};
+
+  key <BKSL> {[ backslash, bar ]};
+
+  include "level3(ralt_switch)"
+};
+```
+
+### Русская раскладка
+С русской раскладкой поинтереснее. Раскладка описана в разделе `common`, но по
+умолчанию стоит `winkeys`, в которой просто описаны заново некоторые клавиши. Я
+изменю `winkeys`, переопределив ещё несколько клавиш. Вот `winkeys`, 
+оформленный мной (оригинал всё там же, в оригинальном файле):
+
+```c
+default  partial alphanumeric_keys
+xkb_symbols "winkeys" {
+
+  include "ru(common)"
+  name[Group1]= "Russian";
+
+  key <AE03> {[ 3, numerosign ]};
+  key <AE04> {[ 4, semicolon ]};
+  key <AE05> {[ 5, percent ]};
+  key <AE06> {[ 6, colon ]};
+  key <AE07> {[ 7, question ]};
+  key <AE08> {[ 8, asterisk, U20BD ]};
+
+  key <AB10> {[ period,    comma ]};
+  key <BKSL> {[ backslash, slash ]};
+};
+```
+
+Внимание на клавишу `AE08`, в третьем уровне есть символ `U20BD`. Это знак
+рубля. У меня он не пишется, вероятно, потому что нет этой строчки:
+
+```c
+include "level3(ralt_switch)"
+```
+
+Добавляю её и переопределяю ещё парочку. В итоге вот так:
+
+```c
+default  partial alphanumeric_keys
+xkb_symbols "winkeys" {
+
+  include "ru(common)"
+  name[Group1]= "Russian";
+
+  key <AE03> {[ 3, numerosign ]};
+  key <AE04> {[ 4, semicolon ]};
+  key <AE05> {[ 5, percent ]};
+  key <AE06> {[ 6, colon ]};
+  key <AE07> {[ 7, question ]};
+  key <AE08> {[ 8, asterisk, U20BD ]};
+
+  key <AE11> {[ minus, underscore, emdash ]}; // —
+
+  key <AD06> {[ Cyrillic_en,    Cyrillic_EN,    Home ]};
+  key <AD07> {[ Cyrillic_ghe,   Cyrillic_GHE,   Page_Down ]};
+  key <AD08> {[ Cyrillic_sha,   Cyrillic_SHA,   Page_Up ]};
+  key <AD09> {[ Cyrillic_shcha, Cyrillic_SHCHA, End ]};
+  key <AD10> {[ Cyrillic_ze,    Cyrillic_ZE,    BackSpace ]};
+  key <AD11> {[ Cyrillic_ha,    Cyrillic_HA,    Delete ]};
+
+  key <AC06> {[ Cyrillic_er, Cyrillic_ER, Left ]};
+  key <AC07> {[ Cyrillic_o,  Cyrillic_O,  Down ]};
+  key <AC08> {[ Cyrillic_el, Cyrillic_EL, Up ]};
+  key <AC09> {[ Cyrillic_de, Cyrillic_DE, Right ]};
+
+  key <AB08> {[ Cyrillic_be, Cyrillic_BE, guillemotleft ]}; // «
+  key <AB09> {[ Cyrillic_yu, Cyrillic_YU, guillemotright ]}; // »
+  key <AB10> {[ period,      comma ]};
+
+  key <BKSL> {[ backslash, slash ]};
+
+  include "level3(ralt_switch)"
+};
+```
+
+## Что дальше?
+Теперь у нас есть два измененённых файла. Чтобы их установить, достаточно
+просто заменить на них оригинальные. Но разве это круто?
+
+Я сделаю как разработчики ядра линукса — сделаю патч. При помощи программы
+`diff` ищем различия между файлами и записываем их в другие файлы:
+
+```bash
+diff /usr/share/X11/xkb/symbols/us ~/keyboard/us > us.diff
+diff /usr/share/X11/xkb/symbols/ru ~/keyboard/ru > ru.diff
+```
+
+В этих файлах инструкции, которые нужно выполнить, чтобы оригинальный файл стал
+выглядеть как новый. Так делают, когда изменяемые файлы слишком большие, и
+передавать полные файлы долго.
+
+## Как установить?
+### Создание установочного скрипта
+### Использование установочного скрипта
+
+## Послесловие
+
+## Дополнительные ссылки
+
+To be continued
