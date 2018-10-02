@@ -1,0 +1,207 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("borealTable");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc"; 
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++; 
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+<table id='borealTable'>
+        <tr>
+          <th onclick='sortTable(0)'>Glossa</th>
+          <th onclick='sortTable(1)'>Boreal</th>
+        </tr>
+<tr><td>navel </td><td> emb</td></tr>
+<tr><td>to give </td><td> xok</td></tr>
+<tr><td>to fall </td><td> tajz</td></tr>
+<tr><td>leg/foot </td><td> gow</td></tr>
+<tr><td>ant </td><td> sojr</td></tr>
+<tr><td>dog </td><td> oq</td></tr>
+<tr><td>egg </td><td> naj</td></tr>
+<tr><td>louse </td><td> xaw</td></tr>
+<tr><td>in </td><td> es</td></tr>
+<tr><td>to cry/weep </td><td> pam</td></tr>
+<tr><td>fly (insect) </td><td> ing</td></tr>
+<tr><td>to eat </td><td> bon</td></tr>
+<tr><td>1sg </td><td> ji(q)</td></tr>
+<tr><td>2sg </td><td> zu(q)</td></tr>
+<tr><td>dem-sg </td><td> qe</td></tr>
+<tr><td>1du </td><td> zit</td></tr>
+<tr><td>2du </td><td> rit</td></tr>
+<tr><td>dem-du </td><td> qet</td></tr>
+<tr><td>1pl </td><td> gi</td></tr>
+<tr><td>2pl </td><td> di</td></tr>
+<tr><td>dem-pl </td><td> qeq</td></tr>
+<tr><td>eye </td><td> jok</td></tr>
+<tr><td>root </td><td> dird</td></tr>
+<tr><td>black </td><td> sim</td></tr>
+<tr><td>soil </td><td> gam</td></tr>
+<tr><td>new </td><td> kez</td></tr>
+<tr><td>to blow </td><td> kus</td></tr>
+<tr><td>to drink </td><td> kik</td></tr>
+<tr><td>liver </td><td> tux</td></tr>
+<tr><td>bone </td><td> wej</td></tr>
+<tr><td>to do/to make </td><td> qi</td></tr>
+<tr><td>to laugh </td><td> molk</td></tr>
+<tr><td>name </td><td> gim</td></tr>
+<tr><td>fish </td><td> bux</td></tr>
+<tr><td>to hear </td><td> lik</td></tr>
+<tr><td>blood </td><td> owg</td></tr>
+<tr><td>to see </td><td> ag</td></tr>
+<tr><td>salt </td><td> gaz</td></tr>
+<tr><td>hard </td><td> wid</td></tr>
+<tr><td>stone/rock </td><td> zub</td></tr>
+<tr><td>flesh/meat </td><td> mur</td></tr>
+<tr><td>good </td><td> juk</td></tr>
+<tr><td>not </td><td> er</td></tr>
+<tr><td>mouth </td><td> gik</td></tr>
+<tr><td>big </td><td> erg</td></tr>
+<tr><td>rope </td><td> mod</td></tr>
+<tr><td>far </td><td> kir</td></tr>
+<tr><td>to bite </td><td> tel</td></tr>
+<tr><td>to say </td><td> zak</td></tr>
+<tr><td>old </td><td> seng</td></tr>
+<tr><td>to hit/to beat </td><td> wam</td></tr>
+<tr><td>fire </td><td> qax</td></tr>
+<tr><td>to run </td><td> lejr</td></tr>
+<tr><td>hair </td><td> junk</td></tr>
+<tr><td>neck </td><td> gib</td></tr>
+<tr><td>leaf </td><td> ojb</td></tr>
+<tr><td>bitter </td><td> jod</td></tr>
+<tr><td>heavy </td><td> ped</td></tr>
+<tr><td>horn </td><td> owr</td></tr>
+<tr><td>to burn (intransitive) </td><td> sols</td></tr>
+<tr><td>small </td><td> lej</td></tr>
+<tr><td>house </td><td> urq</td></tr>
+<tr><td>breast </td><td> rod</td></tr>
+<tr><td>smoke </td><td> zirg</td></tr>
+<tr><td>star </td><td> malb</td></tr>
+<tr><td>bird </td><td> lo</td></tr>
+<tr><td>to suck </td><td> jag</td></tr>
+<tr><td>hide/skin </td><td> sejn</td></tr>
+<tr><td>back </td><td> laz</td></tr>
+<tr><td>knee </td><td> ens</td></tr>
+<tr><td>rain </td><td> dat</td></tr>
+<tr><td>1 </td><td> as</td></tr>
+<tr><td>2 </td><td> tax</td></tr>
+<tr><td>3 </td><td> lejq</td></tr>
+<tr><td>4 </td><td> kit</td></tr>
+<tr><td>5 </td><td> xejk</td></tr>
+<tr><td>6 </td><td> lejt</td></tr>
+<tr><td>7 </td><td> lejdejt</td></tr>
+<tr><td>8 </td><td> tadejt</td></tr>
+<tr><td>9 </td><td> asdejt</td></tr>
+<tr><td>10 </td><td> xejt</td></tr>
+<tr><td>11 </td><td> asduk</td></tr>
+<tr><td>12 </td><td> buk</td></tr>
+<tr><td>knuckle </td><td> buk</td></tr>
+<tr><td>to go </td><td> ju</td></tr>
+<tr><td>night </td><td> narz</td></tr>
+<tr><td>ash </td><td> paw</td></tr>
+<tr><td>red </td><td> mund</td></tr>
+<tr><td>to crush/to grind </td><td> gir</td></tr>
+<tr><td>to carry </td><td> xiz</td></tr>
+<tr><td>ear </td><td> miq</td></tr>
+<tr><td>to know </td><td> xewd</td></tr>
+<tr><td>nose </td><td> jus</td></tr>
+<tr><td>to stand </td><td> am</td></tr>
+<tr><td>sand </td><td> xort</td></tr>
+<tr><td>long </td><td> siz</td></tr>
+<tr><td>second, other </td><td> um</td></tr>
+<tr><td>fish </td><td> ziw</td></tr>
+<tr><td>leaf </td><td> xun</td></tr>
+<tr><td>good </td><td> gajd</td></tr>
+<tr><td>bad </td><td> mit</td></tr>
+<tr><td>tree </td><td> tuj</td></tr>
+<tr><td>arrow </td><td> zax</td></tr>
+<tr><td>bow </td><td> der</td></tr>
+<tr><td>to pull </td><td> dil</td></tr>
+<tr><td>ablative preposition </td><td> da-</td></tr>
+<tr><td>acquire </td><td> pir</td></tr>
+<tr><td>try </td><td> zajw</td></tr>
+<tr><td>color, shine </td><td> taj</td></tr>
+<tr><td>white </td><td> zimb</td></tr>
+<tr><td>green </td><td> sip</td></tr>
+<tr><td>and </td><td> et</td></tr>
+<tr><td>but </td><td> ox</td></tr>
+<tr><td>what </td><td> i</td></tr>
+<tr><td>where </td><td> it</td></tr>
+<tr><td>locative preposition </td><td> ta-</td></tr>
+<tr><td>when </td><td> ix</td></tr>
+<tr><td>temporalis preposition </td><td> xa-</td></tr>
+<tr><td>why </td><td> im</td></tr>
+<tr><td>ergative preposition </td><td> ma-</td></tr>
+<tr><td>how many </td><td> iw</td></tr>
+<tr><td>equative preposition </td><td> wa-</td></tr>
+<tr><td>man </td><td> mug</td></tr>
+<tr><td>father </td><td> ux</td></tr>
+<tr><td>entrails </td><td> wiz</td></tr>
+<tr><td>to breathe </td><td> lu</td></tr>
+<tr><td>lungs </td><td> wir</td></tr>
+<tr><td>throat, neck </td><td> dis</td></tr>
+<tr><td>now </td><td> li</td></tr>
+<tr><td>today </td><td> awx</td></tr>
+<tr><td>year, a long time </td><td> ur</td></tr>
+<tr><td>tomorrow </td><td> lus</td></tr>
+<tr><td>since, abtemporalis preposition </td><td> pa</td></tr>
+<tr><td>yet </td><td> ol</td></tr>
+<tr><td>yesterday </td><td> xar</td></tr>
+<tr><td>uh </td><td> e</td></tr>
+<tr><td>to have </td><td> bajt</td></tr>
+<tr><td>to talk </td><td> bal</td></tr>
+<tr><td>wind </td><td> qelu</td></tr>
+<tr><td>here </td><td> qit</td></tr>
+<tr><td>head </td><td> sag</td></tr>
+<tr><td>believe </td><td> pur</td></tr>
+<tr><td>want </td><td> zek</td></tr>
+<tr><td>what + ablative preposition </td><td> id</td></tr>
+</table>

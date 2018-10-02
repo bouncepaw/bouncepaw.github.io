@@ -1,0 +1,15 @@
+#!/usr/bin/sh
+echo "<table id='borealTable'>
+        <tr>
+          <th onclick='sortTable(0)'>Glossa</th>
+          <th onclick='sortTable(1)>Boreal</th>
+        </tr>"
+cat dict.txt | while read -r line
+do
+    IFS='|'
+    hands=($line)
+    echo "<tr><td>${hands[0]}</td><td>${hands[1]}</td></tr>"
+    unset IFS
+done
+echo "</table>"
+    
