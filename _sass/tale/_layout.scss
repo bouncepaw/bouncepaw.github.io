@@ -90,10 +90,14 @@ footer {
   }
 }
 
+footer {
+    font-family: "PT Sans", sans-serif;
+}
 
 .copyright {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .copyright * {
   margin: 3px;
