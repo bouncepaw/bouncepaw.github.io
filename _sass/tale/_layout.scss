@@ -111,6 +111,7 @@ footer {
 .copyright__upper-bound {
   font-size: .8em;
   line-height: 0;
+  margin-bottom: -3px;
 }
 
 .copyright__sigma {
@@ -118,7 +119,8 @@ footer {
 }
 
 .copyright__lower-bound {
-  font-size: .8em;
+    font-size: .8em;
+    margin-top: -3px;
 }
 
 .copyright__n {
