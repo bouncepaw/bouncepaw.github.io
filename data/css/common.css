@@ -32,34 +32,3 @@ a {
   .topbar a {
     font-family: monospace;
     }
-
-.copyright {
-  display: flex;
-  align-items: center;
-}
-
-.copyright * {
-  margin: 3px;
-}
-
-.copyright__sum {
-  display: flex;
-  flex-direction: column;
-}
-
-.copyright__upper-bound {
-  font-size: .8em;
-  line-height: 0;
-}
-
-.copyright__sigma {
-  font-size: 3em;
-}
-
-.copyright__lower-bound {
-  font-size: .8em;
-}
-
-.copyright__n {
-  font-style: italic;
-}
