@@ -1,8 +1,36 @@
 <footer class="footer">
   <hr>
   <center><img class="footer_image" src="/images/copyright-notice.png"></center>
+  <center>
+    <div class="copyright footer__copyright">
+      <div class="copyright__sign">
+        &copy;
+      </div>
+
+      <div class="copyright__sum">
+        <div class="copyright__upper-bound">
+          2018
+        </div>
+        <div class="copyright__sigma">
+          &sum;
+        </div>
+        <div class="copyright__lower-bound">
+          2017
+        </div>
+
+      </div>
+
+      <div class="copyright__n">
+        n
+      </div>
+
+      <div class="copyright__name">
+        Timur Ismagilov
+      </div>
+    </div>
+  </center>
   <time class="footer__date" datetime="{{ page.date }}">
-    {{ page.date | date: "%Y-%m-%d" }}
+    {{ page.date | date: %d.%m.%Y" }}
   </time>
   ·
   <a class="footer__link" href="https://t.me/bouncepaw">мой тг</a>
