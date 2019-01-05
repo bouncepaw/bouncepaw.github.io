@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h1>Agidel/C</h1>
+
+<p>This is macro plugin for Agidel.</p>
+
+<h2>Documentation</h2>
+
+<h3>require</h3>
+
+<p><code>
+(require f…)
+</code>
+Corresponds to <code>#include</code> directive. If <code>f</code> is a string, it gets <code>#include</code>d as
+it is, if <code>f</code> is a symbol, it gets wrapped in <code>&lt;&gt;</code> and then gets <code>#include</code>d.</p>
+
+<p>```
+(require stdio.h &ldquo;myfile.h&rdquo;)</p>
+
+<h1>include &lt;stdio.h></h1>
+
+<h1>include &ldquo;myfile.h&rdquo;</h1>
+
+<p>```</p>
+
+<h3>defvar</h3>
+
+<p><code>
+1 (defvar (name type…)…)
+2 (defvar (name type… rhand)…)
+</code>
+Corresponds to multiple variable declarations. You can declare any number of
+<code>type</code>s. Anything other than <code>type</code> is considered as <code>rhand</code>.</p>
+
+<p>```
+(defvar (foo bool))
+bool foo;</p>
+
+<p>(defvar (foo const bool) (bar char *))
+const bool foo;
+char * bar;</p>
+
+<p>(defvar (i int 1))</p>
+
+<p>```</p>
+
+<h3>define</h3>
+
+<p><code>
+1 (define macro-name val)
+2 (define macro-name "val")
+3 (define macro-name (arg…) expr…)
+</code>
+1, 2 correspond to macro constants. If the <code>val</code> is a string, quotes get
+ignored. If you really want to put an actual string there, double-quote it.</p>
+
+<p>3 corresponds to macro function. Result of every <code>expr</code> gets chained together.</p>
+
+<p>```
+(define LED_PIN 3)</p>
+
+<h1>define LED_PIN 3</h1>
+
+<p>(define OPEN &ldquo;(&rdquo;)</p>
+
+<h1>define OPEN (</h1>
+
+<p>(define STR &ldquo;\"STR\&rdquo;&ldquo;)</p>
+
+<h1>define STR &ldquo;STR&rdquo;</h1>
+
+<p>(define STR {&ldquo;STR&rdquo;})</p>
+
+<h1>define STR &ldquo;STR&rdquo;</h1>
+
+<p>(define putc &copy;
+   [printf &ldquo;%c&rdquo; c])</p>
+
+<h1>define putc&copy; printf(&ldquo;%c&rdquo;, c)</h1>
+
+<p>(define double_putc &copy;
+   (putc c)
+   (putc c))</p>
+
+<h1>define double_putc&copy; putc&copy;; putc&copy;</h1>
+
+<p>```</p>
+
+<h3>defun</h3>
+
+<p><code>
+1 (defun (fun-name fun-type…) ((arg-name arg-type…)*) expr…)
+2 (defun (fun-name fun-type…) ((arg-name arg-type…)*))
+</code>
+Corresponds to function declaration.</p>
+
+<p>```
+(defun (main int) ((argc int) (argv char<strong>))
+   [printf &ldquo;hello world&rdquo;]
+   (return 0))
+int main(int argc, char</strong> argv) {
+    printf(&ldquo;hello world&rdquo;);
+    return 0;
+}</p>
+
+<p>(defun (foo void) ())
+void foo();
+```</p>
+
+<h3>while</h3>
+
+<p><code>
+(while test expr*)
+</code>
+Corresponds to the <code>while</code> loop.</p>
+
+<p><code>
+(while true
+   [printf "foobar"])
+while (true) {
+    printf("foobar");
+}
+</code></p>
+
+<h3>if</h3>
+
+<p><code>
+(if test then-clause else-clause)
+</code>
+Corresponds to the traditional <code>if</code> branching construction.</p>
+
+<p><code>
+(if (eq? 1 1)
+   [printf "equal"]
+   [printf "not equal"])
+if (1 == 1) {
+    printf("equal");
+} else {
+    printf("not equal");
+}
+</code></p>
+
+<h3>unless</h3>
+
+<p><code>
+(unless test then-clause else-clause)
+</code>
+Reversed version of <code>if</code>.</p>
+
+<p><code>
+(unless (eq? 1 1)
+   [printf "equal"]
+   [printf "not equal"])
+if (!(1 == 1)) {
+    printf("equal");
+} else {
+    printf("not equal");
+}
+</code></p>
+
+<h3>cond</h3>
+
+<p><code>
+1 (cond (test then-clause)…)
+2 (cond (test then-clause)… (else else-clause))
+</code>
+Corresponds to nested <code>if</code>s. If the last test expression equals to <code>else</code>, the
+clause corresponds to <code>else</code>.</p>
+
+<p><code>
+(cond
+   ((&gt; n 0) [printf "bigger than zero"])
+   ((&lt; n 0) [printf "lower than zero"])
+   (else [printf "equals to zero"]))
+if (0 &gt; n) {
+    printf("bigger than zero");
+} else if (n &lt; 0) {
+    printf("lower than zero");
+} else {
+    printf("equals to zero");
+}
+</code></p>
+
+<h3>eq?</h3>
+
+<p><code>
+(eq? oper1 oper2…)
+</code>
+The <code>==</code> operator. Any number of operands can be used.</p>
+
+<p>```
+(eq? 1 1)
+1 == 1</p>
+
+<p>(eq? 11 22 33)
+(11 == 22) &amp;&amp; (22 == 33)
+```</p>
+
+<h3>begin</h3>
+
+<p><code>
+(begin expr…)
+</code>
+Brace-enclosed block of code.</p>
+
+<p><code>
+(begin
+   [printf "foo"]
+   [printf "bar"])
+{
+    printf("foo");
+    printf("bar");
+}
+</code></p>
+
+<h3>inc</h3>
+
+<p><code>
+(inc num)
+</code>
+Post-incrementation operator <code>num++</code>.</p>
+
+<h3>dec</h3>
+
+<p><code>
+(dec num)
+</code>
+Post-decrementation operator <code>num--</code>;</p>
+
+<h3>set</h3>
+
+<p><code>
+(set var val)
+</code>
+Assigns <code>val</code> to <code>val</code>.</p>
+
+<p><code>
+(set foo 1)
+foo = 1;
+</code></p>
+
+<h3>return</h3>
+
+<p><code>
+(return val)
+</code>
+<code>return</code> operator.</p>
+
+<p><code>
+(return 0)
+return 0;
+</code></p>
+
+</body>
+</html>
