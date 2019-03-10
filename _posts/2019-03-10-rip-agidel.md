@@ -47,7 +47,7 @@ layout:    ru
 Сделать такую программу, которая на вход получает программу в лисповом
 синтаксисе:
 
-```lisp
+```clojure
 (import stdio.h)
 (defun (main int) ()
   [printf "hello world!\n"] ; квадратные скобки для вызова сишных функций
@@ -156,7 +156,7 @@ int main(int argc, char** argv) {
 схеме, который скармливал интерпретатору прямо там. Потом я переписал эту часть
 на Агидель/sh. Вот так выглядит исходный код главной программы:
 
-```lisp
+```clojure
 (shebang!)
 (set import_statement
      "(import (prefix (only scheme define string-append display)
