@@ -1,7 +1,7 @@
 var _this = this;
 var output = {
     el: document.getElementById('output'),
-    replace: function (digit) { return _this.el.innerHTML = digit; }
+    replace: function (digit) { return _this.el.innerHTML += digit; }
 };
 var buffer = {
     writingNow: true,
@@ -10,6 +10,7 @@ var buffer = {
     three: false,
     four: false,
     register: function (digit, state) {
+        console.log("Register " + state + " keypress of " + digit);
         _this.writingNow = state ? true : false;
         switch (digit) {
             case "1":
@@ -70,6 +71,8 @@ var buffer = {
 document.addEventListener('keydown', function (e) {
     if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4")
         buffer.register(e.key, true);
+    else
+        console.log("A different key was pressed down");
 });
 document.addEventListener('keyup', function (e) {
     if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4")

@@ -1,6 +1,6 @@
 const output = {
     el: document.getElementById('output'),
-    replace: (digit: string) => this.el.innerHTML = digit,
+    replace: (digit: string) => this.el.innerHTML += digit,
 }
 let buffer = {
     writingNow: true,
@@ -9,6 +9,7 @@ let buffer = {
     three: false,
     four: false,
     register: (digit: string, state: boolean) => {
+        console.log(`Register ${state} keypress of ${digit}`)
         this.writingNow = state ? true : false
         switch (digit) {
             case "1":
@@ -23,7 +24,6 @@ let buffer = {
             case "4":
                 this.four = state ? true : false
                 break
-
         }
         return this
     },
@@ -57,6 +57,8 @@ let buffer = {
 document.addEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4")
         buffer.register(e.key, true)
+    else
+        console.log("A different key was pressed down")
 })
 document.addEventListener('keyup', (e: KeyboardEvent) => {
     if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4")
