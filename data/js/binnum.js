@@ -6,19 +6,20 @@ var buffer = {
     four: false,
     register: function (digit, state) {
         console.log("Register " + state + " keypress of " + digit);
-        this.writingNow = state ? true : false;
+        console.log("Now: " + this.one + " " + this.two + " " + this.three + " " + this.four);
+        this.writingNow = state;
         switch (digit) {
             case "1":
-                this.one = state ? true : false;
+                this.one = state;
                 break;
             case "2":
-                this.two = state ? true : false;
+                this.two = state;
                 break;
             case "3":
-                this.three = state ? true : false;
+                this.three = state;
                 break;
             case "4":
-                this.four = state ? true : false;
+                this.four = state;
                 break;
         }
         return this;
@@ -56,7 +57,7 @@ var buffer = {
             if (this.two && this.three && this.four)
                 return "0";
         }
-        return "error ";
+        return "E ";
     },
     tryPrint: function () {
         if (!this.writingNow)
