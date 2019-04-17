@@ -57,7 +57,8 @@ let buffer = {
         }
     },
     tryPrint: function () {
-        document.getElementById('output').innerHTML += this.getNumber()
+        if (this.writingNow)
+            document.getElementById('output').innerHTML += this.getNumber()
 
     }
 }

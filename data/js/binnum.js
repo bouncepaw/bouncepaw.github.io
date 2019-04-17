@@ -57,7 +57,8 @@ var buffer = {
         }
     },
     tryPrint: function () {
-        document.getElementById('output').innerHTML += this.getNumber();
+        if (this.writingNow)
+            document.getElementById('output').innerHTML += this.getNumber();
     }
 };
 document.addEventListener('keydown', function (e) {
