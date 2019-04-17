@@ -75,6 +75,8 @@ document.addEventListener('keydown', function (e) {
         console.log("A different key was pressed down");
 });
 document.addEventListener('keyup', function (e) {
-    if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4")
-        buffer.register(e.key, false).tryPrint();
+    if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4") {
+        buffer.register(e.key, false);
+        buffer.tryPrint();
+    }
 });

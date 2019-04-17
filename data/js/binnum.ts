@@ -61,6 +61,8 @@ document.addEventListener('keydown', (e: KeyboardEvent) => {
         console.log("A different key was pressed down")
 })
 document.addEventListener('keyup', (e: KeyboardEvent) => {
-    if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4")
-        buffer.register(e.key, false).tryPrint()
+    if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4") {
+        buffer.register(e.key, false)
+        buffer.tryPrint()
+    }
 })
