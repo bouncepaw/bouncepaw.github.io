@@ -52,8 +52,6 @@ var buffer = {
                 return "9";
             case 1111:
                 return "0";
-            default:
-                return "E";
         }
     },
     tryPrint: function () {
@@ -73,7 +71,7 @@ document.addEventListener('keyup', function (e) {
     if (e.repeat)
         return;
     else if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4") {
-        buffer.register(e.key, false);
         buffer.tryPrint();
+        buffer.register(e.key, false);
     }
 });
