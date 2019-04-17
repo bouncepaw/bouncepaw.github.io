@@ -6,7 +6,6 @@ let buffer = {
     four: false,
     register: function (digit: string, state: boolean) {
         console.log(`Register ${state} keypress of ${digit}`)
-        console.log(`Now: ${this.one} ${this.two} ${this.three} ${this.four}`)
         this.writingNow = state
         switch (digit) {
             case "1":
@@ -22,6 +21,7 @@ let buffer = {
                 this.four = state
                 break
         }
+        console.log(`Now: ${this.one} ${this.two} ${this.three} ${this.four}`)
         return this
     },
     getNumber: function (): string {
@@ -29,23 +29,32 @@ let buffer = {
         //  N/A    1    2    3    4    5    6    7
         // 1000 1001 1010 1011 1100 1101 1110 1111
         //    8    9  N/A  N/A  N/A  N/A  N/A    0
-        if (!this.one) {
-            if (!this.two) {
-                if (!this.three && this.four) return "1"
-                if (this.three && !this.four) return "2"
-                if (this.three && this.four) return "3"
-            } else if (this.two) {
-                if (!this.three && !this.four) return "4"
-                if (!this.three && this.four) return "5"
-                if (this.three && !this.four) return "6"
-                if (this.three && this.four) return "7"
-            }
-        } else if (this.one) {
-            if (!this.two && !this.three && !this.four) return "8"
-            if (!this.two && !this.three && this.four) return "9"
-            if (this.two && this.three && this.four) return "0"
+        const tmp = (this.one ? 1000 : 0) + (this.two ? 100 : 0) +
+            (this.three ? 10 : 0) + (this.four ? 1 : 0)
+        switch (tmp) {
+            case 1:
+                return "1"
+            case 10:
+                return "2"
+            case 11:
+                return "3"
+            case 100:
+                return "4"
+            case 101:
+                return "5"
+            case 110:
+                return "6"
+            case 111:
+                return "7"
+            case 1000:
+                return "8"
+            case 1001:
+                return "9"
+            case 1111:
+                return "0"
+            default:
+                return "E"
         }
-        return "E "
     },
     tryPrint: function () {
         if (!this.writingNow)
