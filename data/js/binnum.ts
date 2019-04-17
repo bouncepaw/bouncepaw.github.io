@@ -4,7 +4,7 @@ let buffer = {
     two: false,
     three: false,
     four: false,
-    register: (digit: string, state: boolean) => {
+    register: function (digit: string, state: boolean) {
         console.log(`Register ${state} keypress of ${digit}`)
         this.writingNow = state ? true : false
         switch (digit) {
@@ -23,7 +23,7 @@ let buffer = {
         }
         return this
     },
-    getNumber: (): string => {
+    getNumber: function (): string {
         // 0000 0001 0010 0011 0100 0101 0110 0111
         //  N/A    1    2    3    4    5    6    7
         // 1000 1001 1010 1011 1100 1101 1110 1111
@@ -46,21 +46,23 @@ let buffer = {
         }
         return "error "
     },
-    tryPrint: () => {
+    tryPrint: function () {
         if (!this.writingNow)
             document.getElementById('output').innerHTML += this.getNumber()
     }
 }
 document.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (!e.repeat &&
-        (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4"))
+    if (e.repeat)
+        return
+    else if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4")
         buffer.register(e.key, true)
     else
         console.log("A different key was pressed down")
 })
 document.addEventListener('keyup', (e: KeyboardEvent) => {
-    if (!e.repeat &&
-        (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4")) {
+    if (e.repeat)
+        return
+    else if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4") {
         buffer.register(e.key, false)
         buffer.tryPrint()
     }
