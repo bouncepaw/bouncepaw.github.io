@@ -1,7 +1,3 @@
-const output = {
-    el: document.getElementById('output'),
-    replace: (digit: string) => this.el.innerHTML += digit,
-}
 let buffer = {
     writingNow: true,
     one: false,
@@ -51,17 +47,20 @@ let buffer = {
         return "error "
     },
     tryPrint: () => {
-        if (this.writingNow) output.replace(this.getNumber())
+        if (!this.writingNow)
+            document.getElementById('output').innerHTML += this.getNumber()
     }
 }
 document.addEventListener('keydown', (e: KeyboardEvent) => {
-    if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4")
+    if (!e.repeat &&
+        (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4"))
         buffer.register(e.key, true)
     else
         console.log("A different key was pressed down")
 })
 document.addEventListener('keyup', (e: KeyboardEvent) => {
-    if (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4") {
+    if (!e.repeat &&
+        (e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4")) {
         buffer.register(e.key, false)
         buffer.tryPrint()
     }
