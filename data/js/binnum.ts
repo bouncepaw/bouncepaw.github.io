@@ -52,11 +52,13 @@ let buffer = {
                 return "9"
             case 1111:
                 return "0"
+            default:
+                return ""
         }
     },
     tryPrint: function () {
-        if (!this.writingNow)
-            document.getElementById('output').innerHTML += this.getNumber()
+        document.getElementById('output').innerHTML += this.getNumber()
+
     }
 }
 document.addEventListener('keydown', (e: KeyboardEvent) => {
