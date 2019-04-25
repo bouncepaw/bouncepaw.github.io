@@ -2,3 +2,7 @@
     width: 4em;
     height: 4em;
 }
+
+#output {
+    min-height: 4em;
+}
