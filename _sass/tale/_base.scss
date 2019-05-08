@@ -100,3 +100,9 @@ td {
 .copyright__n {
   font-style: italic;
 }
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
