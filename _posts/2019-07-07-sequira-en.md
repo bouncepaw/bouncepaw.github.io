@@ -8,7 +8,7 @@ permalink: sequira-en
 ---
 # Sequira
 
-![Sequira alongside my desktop](https://bouncepaw.github.io/data/img/sequira-workflow.jpg)
+![Sequira alongside my desktop](https://bouncepaw.github.io/data/img/keebs/sequira-workflow.jpg)
 
 ## Preamble
 
@@ -50,11 +50,11 @@ Early 2019 I thought I was ready for creating my first DIY keyboard. I didn't pl
 
 ![](https://bouncepaw.github.io/data/img/keebs/wakizashi.jpg)
 
-When using chorded keyboards you don't press a key to type a character, you press a combination of keys, the chord, just like on piano. I'm not going to tell a lot about it; if you speak Russian, you can read my article about it (or just watch pictures). Also check out source code in C with comments in English.
+When using chorded keyboards you don't press a key to type a character, you press a combination of keys, the chord, just like on piano. I'm not going to tell a lot about it; if you speak Russian, you can read [my article](https://bouncepaw.github.io/wakizashi-ru) about it (or just watch pictures). Also check out [source code](https://github.com/bouncepaw/wakizashi) in C with comments in English.
 
 Wakizashi taught me that chords are a real thing and that it's really possible to create a keyboard by myself! However, as a heavy Emacs and tiling WM user back then, I needed to be able to press hotkeys easily; it wasn't easy to do.
 
-> Wakizashi inspired the author of Catboard to create his own chorded keyboard [Kladenets](https://github.com/ibnteo/kladenets).
+> Wakizashi inspired the author of Catboard to create his own chorded keyboard [Kladenets](https://github.com/ibnteo/kladenets). I think it's much cooler than Wakizashi.
 
 Lessons learned, onto the real keyboard.
 
@@ -80,6 +80,6 @@ Although my keyboard can be considered innovative in many ways, there are lots o
 
 **BAT** is the first real chorded keyboard, I guess. It was the main source of inspiration for Wakizashi, and Sequira can be thought of as a direct ancestor of it.
 
-![BAT](https://bouncepaw.github.io/data/img/bat.png)
+![BAT](https://bouncepaw.github.io/data/img/keebs/bat.png)
 
 
