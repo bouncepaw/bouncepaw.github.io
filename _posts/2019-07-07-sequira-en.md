@@ -76,10 +76,45 @@ Although my keyboard can be considered innovative in many ways, there are lots o
 
 **Snag** is a keyboard made by a guy who lives in the same city as me, Ufa. When I've seen photo of this keyboard for the first time, I fell in love with that stagger and compactness. However, there too few keys for me.
 
-![Snag](https://bouncepaw.github.io/data/img/keebs/snag.)
+![Snag](https://bouncepaw.github.io/data/img/keebs/snag.jpg)
 
 **BAT** is the first real chorded keyboard, I guess. It was the main source of inspiration for Wakizashi, and Sequira can be thought of as a direct ancestor of it.
 
 ![BAT](https://bouncepaw.github.io/data/img/keebs/bat.png)
+
+**Keyboardio** is an expensive keyboard with each key being designed especially for a particular digit.
+
+![Keyboardio](https://bouncepaw.github.io/data/img/keebs/keyboardio.jpg)
+
+One of its features is keys on thenar. It inspired Sequira to have keys on hypothenar. These two terms refer to particular parts of human palm:
+
+![Scheme of palm](https://bouncepaw.github.io/data/img/thenar_hypothenar.jpg)
+
+## Sequira features
+
+### Hypothenar keys
+
+### Thumb keys
+
+### Sun and Moon layers
+
+### Doubled modifier keys
+
+### Mouse emulation
+
+### Text editor shortcuts
+
+### Compose key
+
+### Photo key
+
+### Language toggle key
+
+### Phonetic layouts
+
+### Chords
+
+### Mixed key switches
+
 
 
