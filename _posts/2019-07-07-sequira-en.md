@@ -92,7 +92,17 @@ One of its features is keys on thenar. It inspired Sequira to have keys on hypot
 
 ## Sequira features
 
+Now it's time to tell what this keyboard can actually do. First, take a look at layout of the keyboard. All its layers are pictured. I'll talk about everything in detail.
+
+![Current Sequira layout](https://bouncepaw.github.io/data/img/layout/sequira1.png)
+
 ### Hypothenar keys
+
+I thought it would be cool to have some extra keys on hypothenars. Actually I'm quite used to pressing Ctrl (on standard PC keyboard) or Fn (on standard Mac keyboard) key with hypothenar. To make it easier to press hypothenar keys on Sequira, I took 2∗2 keycaps.
+
+![Hypothenars highligted](https://bouncepaw.github.io/data/img/seq1feat/hypothenar.png)
+
+Turned out these keys are not really useful. I've bound Ctrl and Shift to them to use in difficult hotkeys; I use the left one sometimes, but I don't remember using the right one. Also, I should have moved the keys lower so it is easier to press them, but if would have violated compactness of the keyboard.
 
 ### Thumb keys
 
