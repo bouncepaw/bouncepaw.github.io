@@ -106,6 +106,12 @@ Turned out these keys are not really useful. I've bound Ctrl and Shift to them t
 
 ### Thumb keys
 
+Talking about hotkeys; I use a lot of keyboard hotkeys, I need all the modifiers to be easy to press, so I put all of them under the thumbs along with Sun and Moon keys (I use macOS' notation for keys even though my main PC runs GNU+Linux):
+
+![Thumbs highligted](https://bouncepaw.github.io/data/img/seq1feat/thumb.png)
+
+But these keys work as modifiers only when held with another key. When simply tapped, they work as keys I always need: Tab, Backspace, Space, Delete.
+
 ### Sun and Moon layers
 
 ### Doubled modifier keys
