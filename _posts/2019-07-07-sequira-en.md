@@ -124,9 +124,17 @@ Sun layer consists of function keys {F1..F12}, Insert key, four actions {Undo, C
 
 ![Sun layer](https://bouncepaw.github.io/data/img/seq1feat/sunlayer.png)
 
-### Doubled modifier keys
-
 ### Mouse emulation
+
+Yes, Sequira can emulate mouse out of the box. Although complex movements are very hard, it can be used instead of normal mouse most of time. However, it is not as convenient as Macbook's trackpad.
+
+![Mouse highligted](https://bouncepaw.github.io/data/img/seq1feat/mouse.png)
+
+Also take a look at Sequira's mouse demo:
+
+how do i add video?
+
+### Doubled modifier keys
 
 ### Text editor shortcuts
 
