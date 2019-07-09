@@ -148,6 +148,10 @@ In Sublime text there is the thing called Command palette, very useful. By defau
 
 ### Compose key
 
+[Compose key](https://en.wikipedia.org/wiki/Compose_key) is useful when I need to enter special keys like arrows →←, accented characters áöĥ or anything else. When I have been using standard keyboard, I bound it to Scroll lock key. Nothing changed now, but now the Scroll lock key is on right of left hypothenar key.
+
+![Compose key highligted](https://bouncepaw.github.io/data/img/seq1feat/compose.png)
+
 ### Photo key
 
 ### Language toggle key
