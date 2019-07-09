@@ -116,7 +116,7 @@ But these keys work as modifiers only when held with another key. When simply ta
 
 Function keys {F1..F12}, number keys, etc would not fit into such a small keyboard, so I had to add two extra layers: Sun and Moon. They are active as long as corresponding key is pressed.
 
-Moon layer consists of number keys arranged like on numpad, navigation keys (arrows, home, end, page up, page down), Pause/break, Print screen, tab navigation {Next tab, Previous tab}, rare action keys {F13..F16} bound to some actions in text editor (currently I'm moving away from Emacs to Sublime text 3) and pane navigation keys for the same editor.
+Moon layer consists of number keys arranged like on numpad, navigation keys (arrows, home, end, page up, page down), Pause/break, Print screen, tab navigation {Next tab, Previous tab}, rare function keys {F13..F16} bound to some actions in text editor (currently I'm moving away from Emacs to Sublime text 3) and pane navigation keys for the same editor.
 
 ![Moon layer](https://bouncepaw.github.io/data/img/seq1feat/moonlayer.png)
 
@@ -136,7 +136,15 @@ how do i add video?
 
 ### Doubled modifier keys
 
+To be able to press any complicated hotkey, I doubled all the mods. As you can see, set of {Moon, Ctrl, Super, Alt, Shift, Sun} is laid out in this order on every half. It's also right under the thumbs.
+
+![Doubled mods highligted](https://bouncepaw.github.io/data/img/seq1feat/doublemode.png)
+
 ### Text editor shortcuts
+
+In Sublime text there is the thing called Command palette, very useful. By default, it is bound to `Ctrl+Shift+p`. I created a special key that sends this exact combination, turned out to be cool. Also, there are aforementioned {F13..F16} in the Moon layer, I've bound some actions in Sublime text to them. F17 is also used, it has its own key, I'm planning to use it as a leader keys (like in [Vim](https://www.reddit.com/r/vim/wiki/the_leader_mechanism)).
+
+![Text editor goods](https://bouncepaw.github.io/data/img/seq1feat/texteditor.png)
 
 ### Compose key
 
