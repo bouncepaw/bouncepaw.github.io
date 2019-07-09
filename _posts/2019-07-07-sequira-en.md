@@ -114,6 +114,16 @@ But these keys work as modifiers only when held with another key. When simply ta
 
 ### Sun and Moon layers
 
+Function keys {F1..F12}, number keys, etc would not fit into such a small keyboard, so I had to add two extra layers: Sun and Moon. They are active as long as corresponding key is pressed.
+
+Moon layer consists of number keys arranged like on numpad, navigation keys (arrows, home, end, page up, page down), Pause/break, Print screen, tab navigation {Next tab, Previous tab}, rare action keys {F13..F16} bound to some actions in text editor (currently I'm moving away from Emacs to Sublime text 3) and pane navigation keys for the same editor.
+
+![Moon layer](https://bouncepaw.github.io/data/img/seq1feat/moonlayer.png)
+
+Sun layer consists of function keys {F1..F12}, Insert key, four actions {Undo, Cut, Copy, Paste}, volume control keys and mouse emulation.
+
+![Sun layer](https://bouncepaw.github.io/data/img/seq1feat/sunlayer.png)
+
 ### Doubled modifier keys
 
 ### Mouse emulation
