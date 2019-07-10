@@ -160,7 +160,13 @@ On macOS screenshots are done using hotkeys `Cmd/Super + Shift + {3 4 5}`. The 3
 
 On my GNU+Linux machine I've created similar shortcuts. However, since numbers are part of the Moon layer, the shortcuts would be difficult to press. That's why I added the Photo key, that turns on `Cmd/Super` and `Shift` mods along with the Moon layer. The key itself is hard to press accidentally. I think it's a good feature.
 
-### Language toggle key
+### Language key
+
+As a citizen of Russia, I need to use Cyrillic keyboard layout along with the Latin one. Before Sequira, I used to use `Caps lock` key for switching layouts. Its location is quite comfortable.
+
+![Language key highligted](https://bouncepaw.github.io/data/img/seq1feat/lang.png)
+
+On Sequira I created a key that sends `Caps lock` scancode (so the OS would chande the layout) and also toggles Cyrillic layout layer internally.
 
 ### Phonetic layouts
 
