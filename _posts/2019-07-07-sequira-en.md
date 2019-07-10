@@ -180,6 +180,22 @@ Here's comparison of my layouts with phonetic matches highligted:
 
 ### Chords
 
+This is the key feature of Sequira, because Sequira is semichorded keyboard; I think the first of its kind. Rare letters that did not fit into the main block, punctuation, other characters, etc do not occupy any layer as on many custom keyboards. Instead, they utilize chords.
+
+Only this zone is used for chords:
+
+![Chord zone highlighted](https://bouncepaw.github.io/data/img/seq1feat/chordzone.png)
+
+And here's the layout of chords:
+
+![All chords](https://bouncepaw.github.io/data/img/seq1feat/chords.png)
+
+I tried my best to use rare key combinations for chords. For example, there's no chord on combination of keys {s t a}, because this trigraph is quite common. I wasn't sure this is comfortable at all until I've done Sequira. Now I'm proud to say that it's an extremely cool feature. I recommend everyone to do such thing on their keyboards. QMK has this feature pre-built, it's called combos.
+
+QMK combos/chords are very verbose to type, so I've created a special program that generates the C source code from config file with all the chords. Take a look at the [config file](https://github.com/bouncepaw/sequira/blob/master/chords.ini) (106 lines, 1.06 KB) and [generated code](https://github.com/bouncepaw/sequira/blob/master/keymaps/default/chords.h) (651 lines, 17.6 KB).
+
+The generator is part of [QMK Bonus](https://github.com/klavarog/qmk_bonus) project maintained by Klavarog community. The docs in English are not done yet (no one has started translating yet, actually), but they are coming soon.
+
 ### Mixed key switches
 
 
