@@ -138,7 +138,7 @@ how do i add video?
 
 To be able to press any complicated hotkey, I doubled all the mods. As you can see, set of {Moon, Ctrl, Super, Alt, Shift, Sun} is laid out in this order on every half. It's also right under the thumbs.
 
-![Doubled mods highligted](https://bouncepaw.github.io/data/img/seq1feat/doublemode.png)
+![Doubled mods highligted](https://bouncepaw.github.io/data/img/seq1feat/doublemods.png)
 
 ### Text editor shortcuts
 
