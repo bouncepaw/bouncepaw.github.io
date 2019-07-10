@@ -198,5 +198,14 @@ The generator is part of [QMK Bonus](https://github.com/klavarog/qmk_bonus) proj
 
 ### Mixed key switches
 
+3 different types of key switches are used in Sequira:
+
+- Outemu Blues are used for main part of the keyboard. I've chosen them because I could buy them very cheap (350 RUB or ~5.5 USD for 75 pieces). I wish they were a little lighter to press.
+- Cherry MX Reds are used for 10 high keys in the 4th row. I've chosen them because I didn't want to hear two clicky sounds on one keystroke.
+- Gateron Clears are used for hypothenar keys because each 2∗2 keycap required 4 switches; only combination of the lightest switches would be pressable, these switches are the ones.
+
+![Switch mixture](https://bouncepaw.github.io/data/img/seq1feat/mix.png)
+
+
 
 
