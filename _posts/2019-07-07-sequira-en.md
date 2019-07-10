@@ -170,6 +170,14 @@ On Sequira I created a key that sends `Caps lock` scancode (so the OS would chan
 
 ### Phonetic layouts
 
+I think everyone knows that QWERTY is quite inefficient when it comes to typing. Our Russian ЙЦУКЕН is a little better, but still quite bad. That's why I implemented custom layouts for both languages looking at frequency of letters on Wikipedia.
+
+Turned out most common letters in Russian and English languages match, so I was able to create similar layouts. In the history of computing there were other phonetic layout pairs: QWERTY/ЯВЕРТЫ and ЙЦУКЕН/JCUKEN. They do not have perfect phonetic match, it's impossible because Russian and English alphabets are too different.
+
+Here's comparison of my layouts with phonetic matches highligted:
+
+![Phonetic matches highlighted](https://bouncepaw.github.io/data/img/seq1feat/phonetics.png)
+
 ### Chords
 
 ### Mixed key switches
