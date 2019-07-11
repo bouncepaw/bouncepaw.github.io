@@ -83,6 +83,18 @@ One of its features is keys on thenar. It inspired Sequira to have keys on hypot
 
 ![Scheme of palm](https://bouncepaw.github.io/data/img/thenar_hypothenar.jpg)
 
+## Hardware
+
+So, this is Sequira cut from foamboard:
+
+![](https://bouncepaw.github.io/data/img/keebs/sequira.jpg)
+
+This is Sequira below. I used Amoebas PCBs so I don't have to design my own:
+
+![](https://bouncepaw.github.io/data/img/keebs/sequira_in_amoebas.jpg)
+
+The microcontroller I'm using is Pro Micro clone.
+
 ## Sequira features
 
 Now it's time to tell what this keyboard can actually do. First, take a look at layout of the keyboard. All its layers are pictured. I'll talk about everything in detail.
