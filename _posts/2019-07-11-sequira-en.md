@@ -18,7 +18,7 @@ The first language I've learnt wasn't a programming one, it was Mediawiki markup
 In Mediawiki there's that thing called [templates](https://www.mediawiki.org/wiki/Help:Templates). They can have parameters, which are delimited by the pipe character `|`, and the whole template is wrapped in curly braces `{}`. Here is an example template usage:
 
 ```
-{{Hello|World!}}
+\{{Hello|World!}}
 ```
 As you can see below, it's easy to type on standard QWERTY layout:
 
