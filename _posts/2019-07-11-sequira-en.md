@@ -1,9 +1,8 @@
 ---
 title:     "The Sequira keyboard"
-published: false
-layout:    en
-date:      2019-07-07
-excerpt:   "todo"
+layout:    ru
+date:      2019-07-11
+excerpt:   "Everything about my keyboard"
 permalink: sequira-en
 ---
 # Sequira
