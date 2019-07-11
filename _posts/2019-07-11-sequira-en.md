@@ -135,7 +135,7 @@ To be able to press any complicated hotkey, I doubled all the mods. As you can s
 
 ### Text editor shortcuts
 
-In Sublime text there is the thing called Command palette, very useful. By default, it is bound to `Ctrl+Shift+p`. I created a special key that sends this exact combination, turned out to be cool. Also, there are aforementioned {F13..F16} in the Moon layer, I've bound some actions in Sublime text to them. F17 is also used, it has its own key, I'm planning to use it as a leader keys (like in [Vim](https://www.reddit.com/r/vim/wiki/the_leader_mechanism)). Tab and pane switching shortcuts are also here.
+In Sublime text there is the thing called Command palette, very useful. By default, it is bound to `Ctrl+Shift+p`. I created a special key that sends this exact combination, turned out to be cool. Also, there are aforementioned {F13..F16} in the Moon layer, I've bound some actions in Sublime text to them. F17 is also used, it has its own key (I call it Anchor key), I'm planning to use it as a leader keys (like in [Vim](https://www.reddit.com/r/vim/wiki/the_leader_mechanism)). Tab and pane switching shortcuts are also here.
 
 ![Text editor goods](https://bouncepaw.github.io/data/img/seq1feat/texteditor.png)
 
