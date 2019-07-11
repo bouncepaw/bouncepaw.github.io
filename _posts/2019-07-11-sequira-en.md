@@ -15,9 +15,7 @@ Ever since I started doing IT-related stuff, the thing that bothered me the most
 
 The first language I've learnt wasn't a programming one, it was Mediawiki markup language. I've been running a Russian-language wiki that's still available on the net, though it's abandoned.
 
-In Mediawiki there's that thing called [templates](https://www.mediawiki.org/wiki/Help:Templates). They can have parameters, which are delimited by the pipe character `|`, and the whole template is wrapped in curly braces `{}`. Here is an example template usage:
-
-    \{\{Hello|World!\}\}
+In Mediawiki there's that thing called [templates](https://www.mediawiki.org/wiki/Help:Templates). They can have parameters, which are delimited by the pipe character `|`, and the whole template is wrapped in double curly braces `{}`.
 
 As you can see below, it's easy to type on standard QWERTY layout:
 
