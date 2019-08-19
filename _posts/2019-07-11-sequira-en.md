@@ -219,7 +219,7 @@ I encourage everyone to create their own keyboard. If you have any questions or 
 
 Thanks for reading!
 
-# P.S. Month later
+# P.S. Month later (2019-08-19)
 
 It's been over a month since I wrote this article. I guess it's perfect time to tell how it went.
 
@@ -241,13 +241,13 @@ As I had predicted, I became faster on Sequira than on a standard keyboard. Ther
 
 On Macbook keyboard, I type 120 CPM (characters per minute) on both QWERTY and ЙЦУКЕН. On my phone, I type 240 CPM on ЙЦУКЕН though. As of Sequira, I type 260 CPM in English and 300 in Russian. I'll always be faster in Russian because I use Russian for writing texts (mainly messages in chat) a lot.
 
-These speeds are actually really low. Before creating Sequira, my speeds were 350 on QWERTY and 450 on ЙЦУКЕН. It'll take some time to restore my speed.
+These speeds are actually really low. Before creating Sequira, my speeds were 350 on QWERTY and 450 on ЙЦУКЕН. It'll take some time to restore my speed. After that, I'll continue making my speed higher; there are people that type at 700 CPM.
 
 Now, typing on Macbook makes my hands shake and I feel lost. That's not cool. Maybe I should practice standard layouts as well so I'm not helpless when using other people's PCs.
 
 ## Adjusted layouts
 
-Typing on the keyboard for a month has revealed me some flaws of the layout. Of course, I changed it. Here are layouts for Russian and English:
+Typing on the keyboard for a month has revealed me some flaws of the layout. Of course, I changed it. Here are layouts for Russian and English. Notice that all vowels are on the same half now:
 
 ![Letter layout](https://bouncepaw.github.io/data/img/seq2feat/letters.png)
 
@@ -277,11 +277,11 @@ I changed the keycaps so Sequira looks cuter. Check this out:
 
 ![New keycaps](https://bouncepaw.github.io/data/img/keebs/sequira2.jpg)
 
-You can notice wear signs on the bottom right, by the way. Also, the adhesive tape line in the middle is there to hide marks left by the manga book I dropped on it accidentally.
+You can notice wear signs on the bottom right. Also, the adhesive tape line in the middle is there to hide marks left by the manga book I dropped on it accidentally.
 
 ## New conclusion
 
-New features are coming soon of course. You can follow the development on [GitHub](https://github.com/bouncepaw/sequira).
+New features are coming soon of course. You can follow the development on [GitHub](https://github.com/bouncepaw/sequira). Subscribe to my [Telegram channel](https://t.me/bpblog) if you speak Russian.
 
 Thanks for reading or rereading!
 
