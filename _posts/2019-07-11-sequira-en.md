@@ -219,4 +219,69 @@ I encourage everyone to create their own keyboard. If you have any questions or 
 
 Thanks for reading!
 
+# P.S. Month later
+
+It's been over a month since I wrote this article. I guess it's perfect time to tell how it went.
+
+![Photo of editing this text](https://bouncepaw.github.io/data/img/seq2feat/workflow.jpg)
+
+I use Sequira as my main keyboard. Now I'm 100% sure standard keyboards are awful. I'm comfortable with Sequira and even if I'm not, I can change the firmware to adjust my needs. In fact, it happened several times.
+
+## Esc key on thumb
+
+I was moving to Sublime Text when the article was originally published. At some point I stopped liking it and intalled Neovim. It's a fork of Vim. Now I feel at home again.
+
+In Vi-like editors the `Esc` key is used heavily. Therefore, I moved it to thumb so it is easier to press it:
+
+![Esc key](https://bouncepaw.github.io/data/img/seq2feat/esc-key.png)
+
+## Typing speed
+
+As I had predicted, I became faster on Sequira than on a standard keyboard. There is no way back.
+
+On Macbook keyboard, I type 120 CPM (characters per minute) on both QWERTY and ЙЦУКЕН. On my phone, I type 240 CPM on ЙЦУКЕН though. As of Sequira, I type 260 CPM in English and 300 in Russian. I'll always be faster in Russian because I use Russian for writing texts (mainly messages in chat) a lot.
+
+These speeds are actually really low. Before creating Sequira, my speeds were 350 on QWERTY and 450 on ЙЦУКЕН. It'll take some time to restore my speed.
+
+Now, typing on Macbook makes my hands shake and I feel lost. That's not cool. Maybe I should practice standard layouts as well so I'm not helpless when using other people's PCs.
+
+## Adjusted layouts
+
+Typing on the keyboard for a month has revealed me some flaws of the layout. Of course, I changed it. Here are layouts for Russian and English:
+
+![Letter layout](https://bouncepaw.github.io/data/img/seq2feat/letters.png)
+
+And Sun and Moon layers:
+
+![Sun and Moon layers](https://bouncepaw.github.io/data/img/seq2feat/sunmoon.png)
+
+And the chords:
+
+![Chords](https://bouncepaw.github.io/data/img/seq2feat/chords.png)
+
+## The tragedy of the Reset key
+
+To flash a new firmware to a microcontroller I have to reset it. On Pro Micro I have to short-circuit two pins {RST, GND}. It's a good idea to connect them with a button so it easy to do so, but I haven't added such button. It was a mistake.
+
+Actually there is a lid for the keyboard that closes the electonics inside so they don't get damaged when the keyboard is taken outside. Actually, I did it once.
+
+![The lid](https://bouncepaw.github.io/data/img/seq2feat/bottomlid.jpg)
+
+Some time ago I organised Ufa keyboard meetup (you can read about it on [Reddit](https://www.reddit.com/r/MechanicalKeyboards/comments/clh4tl/ufa_keebmeet_2019/) or in [my Telegram channel](https://t.me/bpblog/1027)). I scotched the lid. To reprogram, I had to tore the lid off. That's cruel to the keyboard.
+
+People told me there's software Reset button in QMK. I'll try it maybe. Else, I'll just wire the button somehow.
+
+## Keyboard state
+
+I changed the keycaps so Sequira looks cuter. Check this out:
+
+![New keycaps](https://bouncepaw.github.io/data/img/keebs/sequira2.jpg)
+
+You can notice wear signs on the bottom right, by the way. Also, the adhesive tape line in the middle is there to hide marks left by the manga book I dropped on it accidentally.
+
+## New conclusion
+
+New features are coming soon of course. You can follow the development on [GitHub](https://github.com/bouncepaw/sequira).
+
+Thanks for reading or rereading!
 
